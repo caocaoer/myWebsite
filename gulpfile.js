@@ -6,7 +6,7 @@ var gulp = require('gulp'),
 gulp.task('serve', function(){
     browserSync.init({
         server: {
-            baseURI: ''
+            baseDir: 'src/'
         }
     });
     gulp.watch('src/sass/*.scss', ['sass']);
@@ -24,3 +24,4 @@ gulp.task('sass', function(){
         stream: true
     }));
 });
+gulp.task('default', ['serve']);
