@@ -1,0 +1,22 @@
+$fontFamily: 'Microsoft YaHei';
+$fontSize: 14px;
+
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select {
+    margin: 0;
+    padding: 0;
+    font-family: $fontFamily;
+}
+img {
+    border: 0;
+    vertical-align: middle;
+}
+ol,ul {
+    list-style: none;
+}
+input,select { 
+    outline:0 none !important; blr:expression(this.onFocus=this.blur()); 
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
