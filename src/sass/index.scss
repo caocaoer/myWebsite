@@ -12,6 +12,9 @@ html,body{
     color: $color;
     font-size: $size;
 }
+body{
+    background-color: #000;
+}
 .container{
     background: url($containerImgUrl) center center/cover no-repeat;
     @include boxSize(100%, 100%);
