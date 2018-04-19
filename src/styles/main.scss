@@ -1,0 +1,70 @@
+/**
+ * 网站基础样式, 一般不用调整
+ */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+    font: 14px/1.5 "Microsoft Yahei", "PingFang SC", Helvetica, Arial, Simsun, sans-serif !important;
+}
+
+body {
+    min-width: 1280px;
+}
+
+input {
+    outline: none;
+}
+
+input::-webkit-input-placeholder {
+    color: #C9D0D7;
+}
+
+input::-moz-placeholder {   /* Mozilla Firefox 19+ */
+    color: #C9D0D7;
+}
+
+input:-moz-placeholder {    /* Mozilla Firefox 4 to 18 */
+    color: #C9D0D7;
+}
+
+input:-ms-input-placeholder {  /* Internet Explorer 10-11 */
+    color: #C9D0D7;
+}
+
+img {
+    border-style: none;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+:global {
+    .clear:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .hide {
+        display: none !important;
+    }
+
+    .wrap {
+        width: 1280px;
+        margin: 0 auto;
+    }
+}
