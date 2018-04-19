@@ -52,6 +52,36 @@ export default {
                     'postcss-loader',
                     'sass-loader'
                 ])
+            }, {
+                test: /\.(woff|eot|ttf|svg)$/,
+                include: path.join(__dirname, 'src/fonts'),
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 10,
+                        name: `${STATIC_PATH}/fonts/[hash].[ext]`
+                    }
+                }]
+            }, {
+                test: /\.(png|jpg|jpeg|gif|svg)$/,
+                exclude: path.join(__dirname, 'src/fonts'),
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 10,
+                        name: `${STATIC_PATH}/images/[hash].[ext]`
+                    }
+                }]
+            }, {
+                test: /\.ico$/,
+                include: path.join(__dirname, 'src/images'),
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: 10,
+                        name: `${STATIC_PATH}/images/[name].[ext]`
+                    }
+                }]
             }
         ]
     },
