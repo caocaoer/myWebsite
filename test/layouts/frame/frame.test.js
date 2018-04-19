@@ -1,21 +1,17 @@
 // import { assert } from 'chai';
 import React from 'react';
-import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-// import Index from '../../../src/Index';
-// import Frame from '../../../src/layouts/frame/Frame';
+import { shallow } from 'enzyme';
+import Frame from '../../../src/layouts/frame/Frame';
 import Footer from '../../../src/layouts/footer/Footer';
-
-const { shallow } = Enzyme;
-
-Enzyme.configure({
-    adapter: new Adapter()
-});
+import Header from '../../../src/layouts/header/Header';
 
 describe('Enzyme的浅渲染测试套件=====================', () => {
-    it('Frame是否包含<Header/>', () => {
-        shallow(<Footer />);
-        // assert.equal(app.find('div'));
-        // expect(app.find(Header));
+    it('Frame包含<Header/>', () => {
+        const frame = shallow(<Frame />);
+        expect(frame.find(Header).length).toEqual(1);
+    });
+    it('Frame包含<Footer/>', () => {
+        const frame = shallow(<Frame />);
+        expect(frame.find(Footer).length).toEqual(1);
     });
 });

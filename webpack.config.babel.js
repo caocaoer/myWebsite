@@ -14,7 +14,7 @@ const extractStyle = new ExtractTextPlugin(`${STATIC_PATH}/css/[contenthash].sty
 
 export default {
     entry: {
-        main: ['./src/index.jsx'],
+        main: ['babel-polyfill', './src/index.jsx'],
         vendor: ['react', 'react-dom', 'react-router']
     },
     output: {
