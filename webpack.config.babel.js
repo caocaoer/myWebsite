@@ -112,5 +112,8 @@ export default {
                 }
             }
         })
-    ]
+    ],
+    devServer: {
+        port: '9090'
+    }
 };
