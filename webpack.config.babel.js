@@ -18,7 +18,7 @@ export default {
         vendor: ['react', 'react-dom', 'react-router']
     },
     output: {
-        publicPath: '/',
+        publicPath: '/', 
         path: path.join(__dirname, 'build'),
         filename: `${STATIC_PATH}/js/[chunkhash].[name].js`
     },
